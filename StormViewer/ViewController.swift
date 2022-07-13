@@ -17,21 +17,27 @@ class ViewController: UITableViewController {
         title = "StormViewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        // MARK: Finding image files
-        let fileManager = FileManager.default // FileManager is a data type that allows us to work with the filesystem
-        let path = Bundle.main.resourcePath! // path is the resource path of the app's bundle
-        let items = try! fileManager.contentsOfDirectory(atPath: path) // Items is an array of all the items in the app's bundle
-        
-        // Sorting items in alphabetical order
-        var sortedItems = items; sortedItems.sort()
-        
-        for item in sortedItems {
-            if item.hasPrefix("nssl") {
-                // Found image file and storing it in pictures[]
-                pictures.append(item)
+        DispatchQueue.global(qos: .background).async {
+            // MARK: Finding image files
+            let fileManager = FileManager.default // FileManager is a data type that allows us to work with the filesystem
+            let path = Bundle.main.resourcePath! // path is the resource path of the app's bundle
+            let items = try! fileManager.contentsOfDirectory(atPath: path) // Items is an array of all the items in the app's bundle
+            
+            // Sorting items in alphabetical order
+            var sortedItems = items; sortedItems.sort()
+            
+            for item in sortedItems {
+                if item.hasPrefix("nssl") {
+                    // Found image file and storing it in pictures[]
+                    self.pictures.append(item)
+                }
+            }
+    //        print(pictures) // Prints array items to the debugging console
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
-//        print(pictures) // Prints array items to the debugging console
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(recommendApp))
     }
