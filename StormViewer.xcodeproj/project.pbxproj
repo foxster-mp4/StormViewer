@@ -24,6 +24,7 @@
 		EC1988E126DD21EB008D19C0 /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC1988D726DD21EB008D19C0 /* nssl0033.jpg */; };
 		EC1988E226DD21EB008D19C0 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC1988D826DD21EB008D19C0 /* nssl0034.jpg */; };
 		ECA4A02526E194E0008FFE19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4A02426E194E0008FFE19 /* DetailViewController.swift */; };
+		ECD475A52894C981003096A2 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD475A42894C981003096A2 /* Picture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EC1988D726DD21EB008D19C0 /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
 		EC1988D826DD21EB008D19C0 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 		ECA4A02426E194E0008FFE19 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ECD475A42894C981003096A2 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		EC1988B926DD21D9008D19C0 /* StormViewer */ = {
 			isa = PBXGroup;
 			children = (
+				ECD475A42894C981003096A2 /* Picture.swift */,
 				EC1988BA26DD21D9008D19C0 /* AppDelegate.swift */,
 				EC1988BC26DD21D9008D19C0 /* SceneDelegate.swift */,
 				EC1988BE26DD21D9008D19C0 /* ViewController.swift */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1988BF26DD21D9008D19C0 /* ViewController.swift in Sources */,
+				ECD475A52894C981003096A2 /* Picture.swift in Sources */,
 				EC1988BB26DD21D9008D19C0 /* AppDelegate.swift in Sources */,
 				EC1988BD26DD21D9008D19C0 /* SceneDelegate.swift in Sources */,
 				ECA4A02526E194E0008FFE19 /* DetailViewController.swift in Sources */,
